@@ -1,0 +1,11 @@
+.container {
+    @apply flex flex-col items-start justify-end relative h-[85vh] mx-10;
+}
+
+.bgImage {
+    @apply w-full h-full object-center object-cover rounded-3xl -z-10;
+}
+
+.categories {
+    @apply flex flex-col items-start justify-center w-3/4 p-16 text-light z-0 gap-4;
+}
