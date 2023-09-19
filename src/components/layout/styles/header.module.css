@@ -3,8 +3,13 @@
 }
 
 .navContainer {
-    @apply flex items-center w-max py-2 sm:py-3 px-4 sm:px-8 rounded-full border border-dark font-medium capitalize gap-2 fixed
-    top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50 transition-all duration-500 shadow-xl
+    @apply flex items-center w-max py-2 sm:py-3 px-4 sm:px-8 rounded-full font-medium capitalize gap-2 fixed
+    top-6 right-1/2 translate-x-1/2 bg-accent/70 text-light border-2 border-accent
+    backdrop-blur-sm z-50 transition-all duration-500 shadow-xl
+}
+
+:global(.dark) .navContainer{
+    @apply bg-accentDark/40 text-dark border-accentDark font-semibold;
 }
 
 .hamburgerContainer {
