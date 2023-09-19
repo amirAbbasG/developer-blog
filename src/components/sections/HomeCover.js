@@ -11,7 +11,8 @@ const HomeCover = ({blogs}) => {
     const sortedBlogs = sortBlogs(blogs)
     const blog = sortedBlogs?.[0]
 
-    return (<section className="w-full inline-block">
+    return (
+        <section className="w-full inline-block">
             <article className={styles.container}>
                 <OverlayGradiant/>
                 <Image
@@ -21,18 +22,21 @@ const HomeCover = ({blogs}) => {
                     placeholder="blur"
                     blurDataURL={blog.image.blurhashDataUrl}
                     className={styles.bgImage}
+                    sizes="100vw"
+                    property
                 />
                 <div className={styles.categories}>
                     <Tag link={`/categories/${slug(blog.tags[0])}`} name={blog.tags[0]}/>
                     <Link href={blog.url} className="mt-2">
-                        <h1 className="font-bold text-4xl capitalize">
+                        <h1 className="font-bold text-lg sm:text-xl md:text-3xl lg:text-4xl capitalize">
                             <HoverUnderlineText text={blog.title}/>
                         </h1>
                     </Link>
-                    <p className="font-inter inline-block text-xl">{blog.description}</p>
+                    <p className="hidden sm:inline-block font-inter md:text-lg lg:text-xl">{blog.description}</p>
                 </div>
             </article>
-        </section>);
+        </section>
+    );
 };
 
 export default HomeCover;

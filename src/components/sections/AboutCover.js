@@ -4,16 +4,19 @@ import characterImg from "@public/images/character.png"
 
 const AboutCover = () => {
     return (
-        <section className="w-full h-[75vh] flex items-center justify-center border-b-2 border-dark text-dark">
-            <div className="w-1/2 h-full flex justify-center border-r-2 border-dark">
+        <section className="w-full md:h-[75vh] flex flex-col md:flex-row items-center justify-center
+        border-b-2 border-dark dark:border-light text-dark dark:text-light">
+            <div className="w-full md:w-1/2 h-full flex justify-center border-r-2 border-dark dark:border-light">
                 <Image
                     src={characterImg}
                     alt="about page"
-                    className="w-full h-full object-center object-contain"
+                    className="w-4/5 xs:w-3/4 md:w-full h-full object-center object-contain"
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1180px) 50vw, 50vw"
                 />
             </div>
-            <div className="w-1/2 flex flex-col justify-center px-16">
-                <h2 className="font-bold text-6xl">
+            <div className="w-full md:w-1/2 flex flex-col justify-center pb-10 px-4 xs:px-8 lg:px-16">
+                <h2 className="font-bold text-3xl md:text-4xl sxl:text-6xl max-lg:text-center">
                     Dream Big, Work Hard, Achieve More!
                 </h2>
                 <p className="text-base font-medium mt-4">

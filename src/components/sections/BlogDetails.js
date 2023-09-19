@@ -9,7 +9,8 @@ const BlogDetails = ({blog, slug: blogSlug}) => {
 
     return (
         <div
-            className="flex items-center justify-around flex-wrap px-10 py-4 mx-10 gap-6 bg-accent rounded-lg text-light font-normal text-xl">
+            className="flex items-center justify-around flex-wrap px-2 md:px-10 py-4 mx-5 md:mx-10 gap-6
+           bg-accent dark:bg-accentDark rounded-lg text-light dark:text-dark font-normal dark:font-semibold text-lg sm:text-xl">
             <time>
                 {format(parseISO(blog.publishedAt), "LLL d, yyyy")}
             </time>

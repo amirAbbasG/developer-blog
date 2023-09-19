@@ -1,4 +1,4 @@
-// please update required information
+
 const siteMetadata = {
     title: 'Next.js Blog With Tailwind CSS and Contentlayer',
     author: 'CodeBucks',
@@ -6,7 +6,7 @@ const siteMetadata = {
     description: 'A blogs created with Next.js, Tailwind.css and contentlayer.',
     language: 'en-us',
     theme: 'system', // system, dark or light
-    siteUrl: 'https://create-blog-with-nextjs.vercel.app', // your website URL
+    siteUrl: 'https://developer-blog-dun.vercel.app/', // your website URL
     siteLogo: '/images/logo.png',
     socialBanner: '/images/social-banner.png', // add social banner in the public folder
     email: 'amir.h.abbas.g@gmail.com@gmail.com',
@@ -19,4 +19,4 @@ const siteMetadata = {
     locale: 'en-US',
 }
 
-module.exports = siteMetadata
+export default siteMetadata

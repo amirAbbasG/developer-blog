@@ -17,11 +17,12 @@ const BlogBigCard = ({blog}) => {
                 placeholder="blur"
                 blurDataURL={blog.image.blurhashDataUrl}
                 className="object-center object-cover rounded-xl -z-10"
+                sizes="(max-width: 1180px) 1000vw, 50vw"
             />
-            <div className="w-full absolute bottom-0 p-10">
-                <Tag link={`/categories/${slug(blog.tags[0])}`} name={blog.tags[0]} className="px-6 py-2 text-sm !border"/>
+            <div className="w-full absolute bottom-0 p-4 xs:p-6 sm:p-10">
+                <Tag link={`/categories/${slug(blog.tags[0])}`} name={blog.tags[0]} className="px-6 py-1 sm:py-2 text-xs sm:text-sm !border"/>
                 <Link href={blog.url}>
-                    <h1 className="font-bold text-2xl capitalize text-light mt-4">
+                    <h1 className="font-bold text-sm xs:text-base sm:text-xl md:text-2xl capitalize text-light mt-2 sm:mt-4">
                         <HoverUnderlineText text={blog.title}/>
                     </h1>
                 </Link>
